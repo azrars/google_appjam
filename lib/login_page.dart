@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/selection_page/selection_page.dart';
 import 'package:flutter_application_1/social_sign_in_button.dart';
 import 'package:flutter_application_1/text_field.dart';
 import 'package:logger/logger.dart';
+
 
 final Logger _logger = Logger();
 
@@ -56,8 +58,11 @@ class LoginPage extends StatelessWidget {
                 width: 200,
                 child: ElevatedButton(
                     onPressed: () {
-                      // Giriş Yap butonuna basıldığında yapılacak işlemler
-                    },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SecimSayfasi()),
+                      );
+                      },
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.amberAccent)),
